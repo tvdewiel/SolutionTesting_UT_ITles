@@ -25,7 +25,7 @@
         public void AddBike(Bike bike)
         {
             if (bike == null) throw new DomainException("Customer");
-            //if (bike.Customer!=null) if (bike.Customer!=this) throw new DomainException("Customer"); //je kan een fiets niet toekennen aan een nieuwe klant
+            //if (bike.Customer!=null) if (bike.Customer!=this) throw new DomainException("Customer"); //je kan een fiets niet toekennen aan een nieuwe klant            
             if (bikes.Contains(bike)) throw new DomainException("Customer");
             bikes.Add(bike);
             if (bike.Customer != this) bike.SetCustomer(this); 
